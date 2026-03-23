@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Blood Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/blood logo.webp" width="40">
+            <span>BloodConnect</span>
+        </div>
+        <div class="menu">
+            <a href="home.html">Home</a>
+            <a href="awareness.html">Awareness</a>
+            <a href="request.html">Blood Request</a>
+            <a href="donate.html">Donate</a>
+        </div>
+
+    </nav>
+
+    <h2>Request Blood</h2>
+    <div class="request-form">
+        <input type="text" id="patient" placeholder="Patient Name"><br>
+        <select id="blood group" required>
+            <option value="">Blood Group</option>
+            <option>A+</option>
+            <option>O+</option>
+            <option>AB+</option>
+          <option>B+</option>
+
+        </select><br>
+        <input type="text" id="location" placeholder="Location" required><br>
+        <input type="text" id="hospital" placeholder="Hospital Name" required><br>
+        <input type="text" id="phone" placeholder="Contact Number" required><br>
+
+        <select>
+            <option>Urgency Level</option>
+            <option>Normal</option>
+            <option>Urgent</option>
+            <option>Critical</option>
+        </select><br>
+
+        <input type="date"><br>
+
+        <textarea placeholder="Additional Details"></textarea><br><br>
+
+        <button onclick="getLocation()">Use My Location</button><br><br>
+        <button type="button" onclick="submitRequest();showDonors()">Submit Request</button>
+    </div>
+    <h3>Nearby Donors</h3>
+
+    <div id="donorList">
+       
+    </div>
+
+    <footer class="footer">
+        <p>@2026 BloodConnect|Donate Blood Save Lives</p>
+        <a href="home.html">Home</a><br>
+        <a href="awareness.html">Awareness</a><br>
+        <a href="request.html">Request For Blood</a><br>
+        <a href="donate.html">Donate Blood</a>
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
